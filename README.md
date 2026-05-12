@@ -52,6 +52,7 @@ npm run live-chat -- --send https://www.youtube.com/watch?v=VIDEO_ID
 - `!help` / `!comandi`
 - `!telegram`
 - `!github`
+- `!gitshield` / `!git-shield`
 - `!schedule`
 - `!podcast`
 - `!pi`

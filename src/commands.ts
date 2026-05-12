@@ -1,10 +1,12 @@
 const PODCAST_URL = "https://www.youtube.com/@senzaunbricioloditesla1628";
 
 const responses: Record<string, string> = {
-  help: "Comandi: !telegram !github !schedule !podcast !pi !claude",
-  comandi: "Comandi: !telegram !github !schedule !podcast !pi !claude",
+  help: "Comandi: !telegram !github !gitshield !schedule !podcast !pi !claude",
+  comandi: "Comandi: !telegram !github !gitshield !schedule !podcast !pi !claude",
   telegram: "Seguimi anche su Telegram: canale https://t.me/elektronvolt - community https://t.me/elektronvolt_community",
   github: "GitHub: https://github.com/vekexasia",
+  gitshield: "Git Shield è il safety net locale per vibe coding: blocca secret e PII prima che il codice lasci il computer. Repo: https://github.com/vekexasia/git-shield",
+  "git-shield": "Git Shield è il safety net locale per vibe coding: blocca secret e PII prima che il codice lasci il computer. Repo: https://github.com/vekexasia/git-shield",
   podcast: `Mi trovi anche nel podcast Senza un Briciolo di Tesla: ${PODCAST_URL}`,
   pi: "Pi è il coding agent che sto usando in live. Link: https://pi.dev",
   claude: "Claude è uno dei modelli che puoi usare con Pi. Per il tool vedi !pi",

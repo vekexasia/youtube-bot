@@ -6,14 +6,14 @@ describe("resolveCommand", () => {
   test("returns compact help without progetto", () => {
     assert.equal(
       resolveCommand("!help", "@utente", new Date("2026-05-12T18:00:00+02:00")),
-      "@utente Comandi: !telegram !github !schedule !podcast !pi !claude",
+      "@utente Comandi: !telegram !github !gitshield !schedule !podcast !pi !claude",
     );
   });
 
   test("supports !comandi as help alias", () => {
     assert.equal(
       resolveCommand("!comandi", "@utente", new Date("2026-05-12T18:00:00+02:00")),
-      "@utente Comandi: !telegram !github !schedule !podcast !pi !claude",
+      "@utente Comandi: !telegram !github !gitshield !schedule !podcast !pi !claude",
     );
   });
 
@@ -26,6 +26,20 @@ describe("resolveCommand", () => {
 
   test("returns the github response", () => {
     assert.equal(resolveCommand("!github", "@utente", new Date("2026-05-12T18:00:00+02:00")), "@utente GitHub: https://github.com/vekexasia");
+  });
+
+  test("returns the git shield response", () => {
+    assert.equal(
+      resolveCommand("!gitshield", "@utente", new Date("2026-05-12T18:00:00+02:00")),
+      "@utente Git Shield è il safety net locale per vibe coding: blocca secret e PII prima che il codice lasci il computer. Repo: https://github.com/vekexasia/git-shield",
+    );
+  });
+
+  test("supports !git-shield as git shield alias", () => {
+    assert.equal(
+      resolveCommand("!git-shield", "@utente", new Date("2026-05-12T18:00:00+02:00")),
+      "@utente Git Shield è il safety net locale per vibe coding: blocca secret e PII prima che il codice lasci il computer. Repo: https://github.com/vekexasia/git-shield",
+    );
   });
 
   test("returns the podcast response", () => {
@@ -49,7 +63,7 @@ describe("resolveCommand", () => {
   });
 
   test("matches commands case-insensitively and ignores trailing text", () => {
-    assert.equal(resolveCommand("!HELP grazie", "@utente", new Date("2026-05-12T18:00:00+02:00")), "@utente Comandi: !telegram !github !schedule !podcast !pi !claude");
+    assert.equal(resolveCommand("!HELP grazie", "@utente", new Date("2026-05-12T18:00:00+02:00")), "@utente Comandi: !telegram !github !gitshield !schedule !podcast !pi !claude");
   });
 });
 
