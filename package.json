@@ -1,0 +1,17 @@
+{
+  "name": "youtube-bot",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --import tsx --test tests/**/*.test.ts",
+    "live-chat": "node --import tsx src/live-chat-viewer.ts"
+  },
+  "dependencies": {
+    "googleapis": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
